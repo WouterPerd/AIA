@@ -1,0 +1,747 @@
+@prefix : <http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/perd/ontologies/2023/0/GS_Vocab-71> .
+
+<http://www.semanticweb.org/perd/ontologies/2023/0/GS_Vocab-71> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#gs:equivalent
+:gs:equivalent rdf:type owl:AnnotationProperty ;
+               rdfs:comment "Aggregated or equivalent units of measurement."@en .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#gs:Gt
+:gs:Gt rdf:type rdfs:Datatype ;
+       rdfs:comment "Giga-Tonne"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#gs:MWe
+:gs:MWe rdf:type rdfs:Datatype ;
+        rdfs:comment "Mega-Watt Electrical"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#gs:MWh
+:gs:MWh rdf:type rdfs:Datatype ;
+        rdfs:comment "Mega-Watt per hour"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#gs:MWt
+:gs:MWt rdf:type rdfs:Datatype ;
+        rdfs:comment "Mega-Watt Thermal"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#gs:kW
+:gs:kW rdf:type rdfs:Datatype ;
+       rdfs:comment "Kilo-Watt"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Affected_Stakeholder
+:Affected_Stakeholder rdf:type owl:Class ;
+                      rdfs:subClassOf :Agent ;
+                      rdfs:comment "Any stakeholder affected physically, socially or economically by the implementation of the Project. Note that affected stakeholders may be outside the Project Area and in some cases be a distance beyond the Project Boundary."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Agent
+:Agent rdf:type owl:Class ;
+       rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#American_National_Standards_Institute
+:American_National_Standards_Institute rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                                       rdfs:comment <https://www.ansica.org> .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Annual_Report
+:Annual_Report rdf:type owl:Class ;
+               rdfs:comment "An annual update submitted by the Project Developer. Report covers updates and actions taken on the Project during a given year."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Assessment
+:Assessment rdf:type owl:Class ;
+            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process> ;
+            rdfs:comment "The combined process of audit, review and decision on a conformity within the requirements of a standard (part of Validation or Verification e.g. a Validation Assessment)."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Assurance
+:Assurance rdf:type owl:Class ;
+           rdfs:subClassOf :Miscellaneous ;
+           rdfs:comment "Demonstrable evidence that specified requirements related to an activity are fulfilled."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Averted_Disability_Adjusted_Life_Year
+:Averted_Disability_Adjusted_Life_Year rdf:type owl:Class ;
+                                       rdfs:subClassOf :Miscellaneous ;
+                                       rdfs:comment "A measure of mortality and morbidity used to demonstrate project impact on SDG 3.  The quantification and certification of ADALYs is undertaken via the use of a GS-Methodology."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Baseline_Scenario
+:Baseline_Scenario rdf:type owl:Class ;
+                   rdfs:comment "The Baseline Scenario is defined as the reasonable, conservative scenario that would exist in the absence of the project. While setting the Baseline Scenario the Project Developer shall take into account the relevant applicable legislation and how effectively these are enforced."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#CDM
+:CDM rdf:type owl:Class ;
+     rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+     rdfs:comment "Standard for the issues of CERs, operated by the UNFCCC."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#CDM_Executive_Board
+:CDM_Executive_Board rdf:type owl:Class ;
+                     rdfs:subClassOf :Agent ;
+                     rdfs:comment "Executive Board of the Clean Development Mechanism."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#CDM_Programme_Activity
+:CDM_Programme_Activity rdf:type owl:Class ;
+                        rdfs:subClassOf :Programme_of_Activities ;
+                        rdfs:comment "A CDM project activity under a programme of activities. A CPA is a single, or a set of interrelated measure(s), to reduce GHG emissions or result in net anthropogenic greenhouse gas removals by sinks, applied within a designated area defined in the baseline methodology."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#CDM_Programme_of_Activity_Design_Document
+:CDM_Programme_of_Activity_Design_Document rdf:type owl:Class ;
+                                           rdfs:subClassOf :CDM_Programme_Activity ;
+                                           rdfs:comment "PDD for a CDM PoA."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Certification
+:Certification rdf:type owl:Class ;
+               rdfs:subClassOf :Issuance ;
+               rdfs:comment "The written assurance confirmation/communication that fulfilment of specified requirements has been demonstrated (Adapted from ISO 17000)."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Community_Service_Activity
+:Community_Service_Activity rdf:type owl:Class ;
+                            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Activity> ;
+                            rdfs:comment "A Project type that entails provision of services to a community.  The Requirements for CSA are included in the Gold Standard Community Services Activity Requirements."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Competence
+:Competence rdf:type owl:Class ;
+            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Resource> ;
+            rdfs:comment "Ability to apply knowledge and skills in Gold Standard audit with a view to achieving intended results."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Complaints
+:Complaints rdf:type owl:Class ;
+            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Reputation> ;
+            rdfs:comment "Formal (written) and/or informal (verbal) expressions of dissatisfaction regarding the performance of an assurance provider in relation to its Gold Standard function(s), from any source, such as the client, the general public or its representatives, government bodies, NGOs, etc."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Conformity
+:Conformity rdf:type owl:Class ;
+            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Condition> ;
+            rdfs:comment "Conformity is defined as the fulfillment of a requirement."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Conformity_Criteria
+:Conformity_Criteria rdf:type owl:Class ;
+                     rdfs:subClassOf :Conformity ;
+                     rdfs:comment "A checklist and associated guidance for GS-VVBs for the Validation or Verification against Gold Standard for the Global Goals."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Coordinating_and_Managing_Entitiy
+:Coordinating_and_Managing_Entitiy rdf:type owl:Class ;
+                                   rdfs:subClassOf :Miscellaneous ;
+                                   rdfs:comment "Entity that communicates with the Gold Standard on all matters related to a PoA and associated activities, as nominated in the cover letters to be submitted for each one of the activities."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Corrective_Action_Request
+:Corrective_Action_Request rdf:type owl:Class ;
+                           rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process> ;
+                           rdfs:comment "With a CAR, the GS-VVB or The Gold Standard requests appropriate action be taken to show conformity with a requirement. In order to achieve a successful certification, all CARs shall be formally closed."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Customary_Rights
+:Customary_Rights rdf:type owl:Class ;
+                  rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                  rdfs:comment "Customary rights are those that result from a long series of habitual or customary actions, constantly repeated, which have, by such repetition and by uninterrupted acquiescence, acquired the force of a law within a geographical or sociological unit."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Design_Certification
+:Design_Certification rdf:type owl:Class ;
+                      rdfs:subClassOf :Certification ;
+                      rdfs:comment "Project Design Certification is a key milestone in the Project Cycle. It marks the point a Project has undertaken Validation, a VVB has submitted a positive opinion and the Gold Standard Project Design Review is complete. Only Certified Project Design status Projects may proceed to Verification/Performance Certification (see also Retro-active Registration/merging Project Design Certification and Performance Certification)."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Designated_National_Authority
+:Designated_National_Authority rdf:type owl:Class ;
+                               rdfs:subClassOf :Agent ;
+                               rdfs:comment "A designated national authority (DNA) is the organization granted responsibility by a Party to authorise and approve participation in CDM projects."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Designated_Operational_Entitiy
+:Designated_Operational_Entitiy rdf:type owl:Class ;
+                                rdfs:subClassOf :Miscellaneous ;
+                                rdfs:comment "A type of VVB that is eligible to apply for GS-VVB status.  DOE is the term used by the UNFCCC for VVBs that are accredited to Validate and Verify CDM Projects."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Disputes
+:Disputes rdf:type owl:Class ;
+          rdfs:subClassOf :Miscellaneous ;
+          rdfs:comment "Disagreement between an assurance provider and the client regarding the assurance provider’s recommendation and/or opinions/decisions made at various stages during the audit."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Eligibility_Principles
+:Eligibility_Principles rdf:type owl:Class ;
+                        rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                        rdfs:comment "The overarching rationale and purpose for the Requirements as related to achieving the Gold Standard Vision and Mission."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Environmental_and_Social_Impact_Assessment
+:Environmental_and_Social_Impact_Assessment rdf:type owl:Class ;
+                                            rdfs:subClassOf :Miscellaneous .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#European_Union
+:European_Union rdf:type owl:Class ;
+                rdfs:subClassOf :Agent ;
+                rdfs:comment "The European Union."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Expert_Stakeholder
+:Expert_Stakeholder rdf:type owl:Class ;
+                    rdfs:subClassOf :Agent ;
+                    rdfs:comment "Expert Stakeholders are individuals that hold specific expertise or knowledge about the organization, process, or activity being audited and/or about the context and practices to which the project is applied. For the purposes of this Standard a Stakeholder is considered an expert if they hold over 10 years of relevant, contextually specific professional, academic or practical experience in a given topic. Higher academic qualifications are preferred but can be justified as not required if necessary."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Forward_Action_Request
+:Forward_Action_Request rdf:type owl:Class ;
+                        rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process> ;
+                        rdfs:comment "Forward Action Request: A VVB or The Gold Standard Secretariat requests appropriate action be taken in the project to become fully compliant with a requirement. FARs are not raised for issues that are linked to the eligibility of a project under the WBC scheme, such as a financial needs assessment. A FAR will be issued where the impact of the infraction is: not material within the current certification, AND unusual or non-systematic, AND correctable in a specific timeframe of less than 1 year. FARs can be closed by The Gold Standard Secretariat or a GS-VVB."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Global_Protocol_for_Communities
+:Global_Protocol_for_Communities rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Accreditation_Approval
+:Gold_Standard_Accreditation_Approval rdf:type owl:Class ;
+                                      rdfs:subClassOf :Miscellaneous ;
+                                      rdfs:comment "Formal recognition an VVB’s institutional capacity and competence to be eligible to carry out the GS audit in accordance with the standard requirements."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Approved_Methodology
+:Gold_Standard_Approved_Methodology rdf:type owl:Class ;
+                                    rdfs:subClassOf :Miscellaneous ;
+                                    rdfs:comment "The specific Activity/Outcome requirements and procedures used to calculate, monitor and report on a given Outcome that may lead to the issuance of Gold Standard Certified SDG Impact Statements or Products."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Approved_SDG_Tool
+:Gold_Standard_Approved_SDG_Tool rdf:type owl:Class ;
+                                 rdfs:subClassOf :Miscellaneous ;
+                                 rdfs:comment "An approved Tool that can be used to demonstrate one or more positive SDG Impacts. They cannot be used for the Issuance of GS Certified SDG Impact Statements or Products."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Certified_Emissions_Reduction
+:Gold_Standard_Certified_Emissions_Reduction rdf:type owl:Class ;
+                                             rdfs:subClassOf :Miscellaneous ;
+                                             rdfs:comment "Certified Emissions Reduction: a carbon credit, issued by another third party standard (typically UNFCCC CDM) for use in the compliance carbon markets.  A Gold Standard labelled CER is known as a GS-CER."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Certified_Products
+:Gold_Standard_Certified_Products rdf:type owl:Class ;
+                                  rdfs:subClassOf :Miscellaneous ;
+                                  rdfs:comment "Products are a type of Gold Standard Certified SDG Impact that are issued by Gold Standard upon the successful Performance Certification under a given GS Approved Methodology and Product Requirements. Examples include GS VERs and CER Labels."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Certified_Project
+:Gold_Standard_Certified_Project rdf:type owl:Class ;
+                                 rdfs:subClassOf :Miscellaneous ;
+                                 rdfs:comment "A Project that has successfully completed Design Certification and completed at least one Performance Certification successfully."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Certified_SDG_Impact_Statement
+:Gold_Standard_Certified_SDG_Impact_Statement rdf:type owl:Class ;
+                                              rdfs:subClassOf :Miscellaneous ;
+                                              rdfs:comment "A Certified Statement issued by Gold Standard upon the successful certification under a given GS Approved Methodology. These may come in a number of forms.   Gold Standard recognises that typically the monitoring parameters included in GS-Approved Methodologies relate to Outcomes rather than Impacts. The use of the term Impact Statement reflects that these Outcomes may be used as a way of communicating the progress towards the impact sought and is typical of impact investment approaches."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Certified_SDG_Impacts
+:Gold_Standard_Certified_SDG_Impacts rdf:type owl:Class ;
+                                     rdfs:subClassOf :Miscellaneous ;
+                                     rdfs:comment "Gold Standard Certified SDG Impacts are achieved by following GS-Approved Methodologies and successfully undergoing Performance Certification. They may be in the form of Gold Standard Certified Products or SDG Impact Statements, issued upon successful completion of Performance Certification."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Foundation
+:Gold_Standard_Foundation rdf:type owl:Class ;
+                          rdfs:subClassOf :Agent ;
+                          rdfs:comment "The owner and operator of Gold Standard for the Global Goals. Gold Standard is a Swiss-based non-profit whose Vision focuses on Climate Security and Sustainable Development for all. https://www.goldstandard.org"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Label
+:Gold_Standard_Label rdf:type owl:Class ;
+                     rdfs:subClassOf :Miscellaneous ;
+                     rdfs:comment "A Gold Standard Label is a type of Product that is Issued to a Project Developer but relates to the application of Gold Standard certification to a product issued by a third party. For example the application of Gold Standard Label to CERs."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_NGO_Supporters
+:Gold_Standard_NGO_Supporters rdf:type owl:Class ;
+                              rdfs:subClassOf :Agent ;
+                              rdfs:comment "Gold Standard was founded by a group of NGOs and continues to represent the interests of civil society in all our work. NGO Supporters can take an active role in the project development process, providing constructive feedback and offering their expertise. This lends further credibility to our local sustainable development initiatives. Every NGO that supports Gold Standard helps strengthen the collective statement that carbon markets should foster transparency, environmental rigor and sustainable development. http://www.goldstandard.org/our-story/who-we-are"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Technical_Advisory_Committee
+:Gold_Standard_Technical_Advisory_Committee rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                                            rdfs:comment "GS TAC is responsible for ensuring the rigor and integrity in all our work, proven existing programs and innovative new initiatives. The TAC is an independent body composed of market specialists that provide expertise, guidance and decisions."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Verified_Emissions_Reduction
+:Gold_Standard_Verified_Emissions_Reduction rdf:type owl:Class ;
+                                            rdfs:subClassOf :Miscellaneous ;
+                                            rdfs:comment "A Gold Standard issued Verified Emissions Reduction: a single unit (one tonne) of CO2 equivalent reduction captured as a carbon credit for use as a commodity within the voluntary carbon market."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Governance_and_Management_System
+:Governance_and_Management_System rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                                  rdfs:comment "System of governance and management applied by a project (see Gold Standard for Sustainable Urban Development)."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Greenhouse_Gas
+:Greenhouse_Gas rdf:type owl:Class ;
+                rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Entity> ;
+                rdfs:comment "A gas that absorbs and emits radiation within the thermal infrared range. This process is the fundamental cause of the greenhouse effect. The primary greenhouse gases in Earth’s atmosphere are water vapor, carbon dioxide, methane, nitrous oxide, and ozone."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#High_Conservation_Value
+:High_Conservation_Value rdf:type owl:Class ;
+                         rdfs:subClassOf :Miscellaneous ;
+                         rdfs:comment "A biological, ecological, social or cultural value of outstanding significance or critical importance."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#ISEAL
+:ISEAL rdf:type owl:Class ;
+       rdfs:subClassOf :Agent ;
+       rdfs:comment "International Social and Environmental Accreditation and Labeling (https://www.isealalliance.org)"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#ISO
+:ISO rdf:type owl:Class ;
+     rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+     rdfs:comment "International Standards Organisation (https://www.iso.org)"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Implementation_Date
+:Implementation_Date rdf:type owl:Class ;
+                     rdfs:subClassOf :Miscellaneous ;
+                     rdfs:comment "The date at which the main activities envisaged by the Project begin operation.  For example:  the first users begin using distributed technology, the commencement of energy generation by an installed device, the planting of trees, the commencement of altered working practices.  Note that test or pilot activities do not constitute Implementation."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Interested_Stakeholder
+:Interested_Stakeholder rdf:type owl:Class ;
+                        rdfs:subClassOf :Agent ;
+                        rdfs:comment "Any stakeholder who is interested (i.e. has expressed an interest) in the Project or its outcomes. They do not to be local or affected."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#International_Union_for_the_Conservation_of_Nature
+:International_Union_for_the_Conservation_of_Nature rdf:type owl:Class ;
+                                                    rdfs:subClassOf :Agent ;
+                                                    rdfs:comment "https://www.iucn.org"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Issuance
+:Issuance rdf:type owl:Class ;
+          rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Output> ;
+          rdfs:comment "The issue by Gold Standard of a Gold Standard Certified Impact Statement or Product (such as a GS VER). These are issued by Gold Standard following the successful completion of Performance Certification."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Justification_Information
+:Justification_Information rdf:type owl:Class ;
+                           rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                           rdfs:comment "Along with an Output Indicator the information that must be provided to support the SDG Contributions claimed by a project. The information must credibly demonstrate how the Output Indicator can be used to show a positive influence on one or more SDG Indicators."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Key_Project_Information
+:Key_Project_Information rdf:type owl:Class ;
+                         rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                         rdfs:comment "A template that captures high level project details in the early stages of development. The Key Project Information is used to support Eligibility Check."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Knowledge
+:Knowledge rdf:type owl:Class ;
+           rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Resource> ;
+           rdfs:comment "The theoretical and/or practical understanding of a subject."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Landlocked_Least_Developed_Country
+:Landlocked_Least_Developed_Country rdf:type owl:Class ;
+                                    rdfs:subClassOf :Least_Developed_Country .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Least_Developed_Country
+:Least_Developed_Country rdf:type owl:Class ;
+                         rdfs:subClassOf :Miscellaneous ;
+                         rdfs:comment "The Least Developed Countries (LDCs) is a list of the countries that, according to the United Nations, exhibit the lowest indicators of socioeconomic development, with the lowest Human Development Index ratings of all countries in the world."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Listed
+:Listed rdf:type owl:Class ;
+        rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#State> ;
+        rdfs:comment "‘Listed’ is a Certification status that an activity may achieve through successful completion of the Preliminary Review."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Local_Stakeholder
+:Local_Stakeholder rdf:type owl:Class ;
+                   rdfs:subClassOf :Agent ;
+                   rdfs:comment "Stakeholders that reside or work within or in close proximity to the Project Area."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Low_Emission_Development_Strategies
+:Low_Emission_Development_Strategies rdf:type owl:Class ;
+                                     rdfs:subClassOf :Agent ;
+                                     rdfs:comment <http://ledsgp.org/?loclang=en_gb> .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Millennium_Development_Goals
+:Millennium_Development_Goals rdf:type owl:Class ;
+                              rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Objective> ;
+                              rdfs:comment "The eight International Development goals adopted by the United Nations, 2000. The Millennium Development Goals conclude as of 2015 and are replaced by the Sustainable Development Goals."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Miscellaneous
+:Miscellaneous rdf:type owl:Class ;
+               rdfs:comment "Weet nie waar om te sit nie!"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Monitoring_Period
+:Monitoring_Period rdf:type owl:Class ;
+                   rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Period> ;
+                   rdfs:comment "The period of time for which a Monitoring Report covers and for which Verification and ultimately Certification is sought."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Monitoring_Report
+:Monitoring_Report rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Monitoring_&_Reporting_Plan> ;
+                   rdfs:comment "A report submitted by the Project Developer in support of Verification. The Monitoring Report includes reports against the parameters set in the Monitoring Plan plus any re-assessment, change or stakeholder feedback received during the Monitoring Period."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#National_Development_Strategy
+:National_Development_Strategy rdf:type owl:Class ;
+                               rdfs:subClassOf :Agent ;
+                               rdfs:comment <http://www.un.org/en/development/desa/policynotes.html> .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Nationally_Appropriate_Mitigation_Action
+:Nationally_Appropriate_Mitigation_Action rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Procedure> ;
+                                          rdfs:comment "NAMAs refer to any action that reduces emissions in developing countries and is prepared under the umbrella of a national governmental initiative. They can be policies directed at transformational change within an economic sector, or actions across sectors for a broader national focus. NAMAs are supported and enabled by technology, financing, and capacity-building and are aimed at achieving a reduction in emissions relative to ‘business as usual’ emissions in 2020. http://www4.unfccc.int/sites/nama/SitePages/Home.aspx"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Nationally_Determined_Contribution
+:Nationally_Determined_Contribution rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                                    rdfs:comment "According to Article 4 paragraph 2 of the Paris Agreement, each Party shall prepare, communicate and maintain successive nationally determined contributions (NDCs) that it intends to achieve. Parties shall pursue domestic mitigation measures, with the aim of achieving the objectives of such contributions."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Non-Conformity
+:Non-Conformity rdf:type owl:Class ;
+                rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Condition> ;
+                rdfs:comment "Non-conformity is a nonfulfillment, lapse in fulfilment or failure to meet a Requirement."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Observation
+:Observation rdf:type owl:Class ;
+             rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Procedure> ;
+             rdfs:comment "With an OBS, the VVB or The Gold Standard Secretariat provides an observation on possible future non-compliance with a requirement. Unlike CARs and FARs, observations are suggestions or warnings and do not need necessarily to be formally corrected. They are given special attention during the next certification."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Ongoing_Financial_Need
+:Ongoing_Financial_Need rdf:type owl:Class ;
+                        rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Entity> ;
+                        rdfs:comment "Tool to demonstrate the ongoing need for financial support resulting from Gold Standard Certification and Issued Claims and Products. The approach is applied at 5 year Registration Renewal."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Online_Platform
+:Online_Platform rdf:type owl:Class ;
+                 rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Resource> ;
+                 rdfs:comment "Gold Standard aspires to build an online user interface to support the use of GS4GG. The written version of the standard will underpin the online platform. During development and road-testing it is likely that an offline version will be used with the online platform commencing later."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Output_Indicator
+:Output_Indicator rdf:type owl:Class ;
+                  rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Indicator> ;
+                  rdfs:comment "An indicator selected by the Project Developer, representing the tangible result of the Project. The indicator, along with the Justification Information and Quality Indicator and any Expert Stakeholder opinion is used to demonstrate SDG Contribution."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Paris_Agreement
+:Paris_Agreement rdf:type owl:Class ;
+                 rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                 rdfs:comment "The Paris Agreement (French: Accord de Paris), or Paris climate accord and Paris climate agreement, is an agreement within the United Nations Framework Convention on Climate Change (UNFCCC) dealing with greenhouse gas emissions mitigation, adaptation and finance starting in the year 2020."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Performance_Review
+:Performance_Review rdf:type owl:Class ;
+                    rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process> ;
+                    rdfs:comment "A review conducted by Gold Standard, TAC and NGO Supporters on the Monitoring Report and Verification Opinion. The result of the Review may lead to Certification, CARs/FARs/OBs being raised or rejection."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Planned_Emissions_Reduction
+:Planned_Emissions_Reduction rdf:type owl:Class ;
+                             rdfs:subClassOf :Miscellaneous ;
+                             rdfs:comment "A Planned Emission Reduction represents the expected (i.e., future) sequestration of 1 tonne of CO2e but does not represent an actual sequestration and accordingly shall not be used for carbon neutral claims until its conversion to a Verified Emission Reduction takes place."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Preliminary_Review
+:Preliminary_Review rdf:type owl:Class ;
+                    rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process> ;
+                    rdfs:comment "Review conducted once at the outset (i.e. at an early stage of project design and before Listing on the GS Registry) of a Project. Part of the Activity Cycle where Gold Standard assesses the Project Information in order to check whether an activity and approach is likely to be eligible for Gold Standard Certification. This procedure, if successful leads to Listed status. The requirements for the Project Design Documentation to be submitted at this stage are detailed in the latest version of GS4GG Principles & Requirements"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Preventative_Action
+:Preventative_Action rdf:type owl:Class ;
+                     rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                     rdfs:comment "Action to prevent the occurrence of non-conformity(ies) or improve the effectiveness of its function."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Product_Requirements
+:Product_Requirements rdf:type owl:Class ;
+                      rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> ;
+                      rdfs:comment "The rules and requirements applicable to a particular Gold Standard Product, for example VERs."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Programme_of_Activities
+:Programme_of_Activities rdf:type owl:Class ;
+                         rdfs:comment "A programme is a linked series of Projects submitted to Gold Standard. A set of related activities with a common objective submitted to Gold Standard."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project
+:Project rdf:type owl:Class ;
+         rdfs:comment "The activity or action being implemented for which Gold Standard Certification is sought."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Area
+:Project_Area rdf:type owl:Class ;
+              rdfs:comment "The Project Area is the physical spatial area or areas submitted for certification. It contains the area required to successfully manage the explicit objectives of the Project."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Boundary
+:Project_Boundary rdf:type owl:Class ;
+                  rdfs:comment "The clearly defined physical boundary or edges of the project that delineate the Project Area from non-Project Areas."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Certification_Renewal
+:Project_Certification_Renewal rdf:type owl:Class ;
+                               rdfs:comment "Project Certification Renewal is the process of Re-certifying with Gold Standard every 5 years. This process follows the Project Design Certification process but specifically focusses on any changes to the Project Design Documentation and an updated Baseline Scenario and a demonstration of Ongoing Financial Need. Certain project-types have adjusted renewal requirements, for example automatic renewal for a number of cycles or reduced/enhanced demonstration requirements. These are captured in the specific Activity Requirements."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Design_Document
+:Project_Design_Document rdf:type owl:Class ;
+                         rdfs:comment "Document that includes all information concerning project design and how it conforms to the Gold Standard Requirements."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Developer
+:Project_Developer rdf:type owl:Class ;
+                   rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Role> ;
+                   rdfs:comment "The person or entity that holds or is applying for certification and therefore responsible for demonstrating compliance with the requirements upon which Gold Standard certification is based.  The Project Developer shall be one individual or entity only."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Documentation
+:Project_Documentation rdf:type owl:Class ;
+                       rdfs:comment "Umbrella term for all project design and monitoring documentation that demonstrates in detail how the Requirements are met. This can include Gold Standard Templates such as Project Design Documents and Monitoring Reports as well as Supporting Documents such as charts, maps or spreadsheets."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Participant
+:Project_Participant rdf:type owl:Class ;
+                     rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Role> ;
+                     rdfs:comment "Is any party or individual who is working closely with the Client to carry out the activities or who has provided written approval for a project. Activity participants shall be collectively represented by the Client or his Representative."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Representative
+:Project_Representative rdf:type owl:Class ;
+                        rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Role> ;
+                        rdfs:comment "Refers to the person or entity that will serve as the focal point for the project. This representative will have sole or joint authority to communicate with the Gold Standard Secretariat regarding all matters related to a project’s certification, alteration or expansion. The project representative can be more than one individual or entity."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Project_Scenario
+:Project_Scenario rdf:type owl:Class ;
+                  rdfs:comment "The Project Scenario is defined as the scenario that will exist once the Project is implemented and operational."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Quality_Indicator
+:Quality_Indicator rdf:type owl:Class ;
+                   rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Indicator> ;
+                   rdfs:comment "Information that is submitted with the Output Indicator and Justification Information that together can be used to demonstrate an SDG Contribution. The Quality Indicator is specifically used in to build upon the Output Indicator which quantifies the results by adding information on the quality of the result."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Relevant_Stakeholders
+:Relevant_Stakeholders rdf:type owl:Class ;
+                       rdfs:subClassOf :Agent ;
+                       rdfs:comment "The collective term for local, affected, interested and expert stakeholders."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Renewable_Energy
+:Renewable_Energy rdf:type owl:Class ;
+                  rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Output> ;
+                  rdfs:comment "The generation of energy from clean, sustainable, renewable processes."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Renewable_Energy_Certificate
+:Renewable_Energy_Certificate rdf:type owl:Class ;
+                              rdfs:subClassOf :Certification ;
+                              rdfs:comment "Renewable Energy Certificates are tradable, non-tangible energy commodities that represent proof that 1 megawatt-hour (MWh) of electricity was generated from an eligible renewable energy resource (renewable electricity) and was fed into the shared system of power lines which transport energy. Renewable Energy Certificates provide a mechanism for the purchase of renewable energy that is added to and pulled from the electrical grid."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Requirements
+:Requirements rdf:type owl:Class ;
+              rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Requirement> ;
+              rdfs:comment "Elements (rules, procedures, guidelines) that the activity must conform to in order to proceed through Validation/Verification and ultimately Certification."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf :Miscellaneous ;
+      rdfs:comment "Actions taken to lessen the probability or negative consequences, or both, associated with a risk."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Roundtable_for_Sustainable_Palm_Oil
+:Roundtable_for_Sustainable_Palm_Oil rdf:type owl:Class ;
+                                     rdfs:subClassOf :Agent ;
+                                     rdfs:comment <https://www.rspo.org> .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#SDG_Impact
+:SDG_Impact rdf:type owl:Class ;
+            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Output> ;
+            rdfs:comment "A direct, positive contribution to a Sustainable Development Goal generated by a Project."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Scale
+:Scale rdf:type owl:Class ;
+       rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Label> ;
+       rdfs:comment "The Scale of a project may refer to a variety of definitions for example areal extent, size of impact or units provided. Scale is not limited in Gold Standard for the Global Goals but is dealt with in the Activity Requirements, Methodologies and Product Requirements where specific definitions and requirements are included."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Shapefile
+:Shapefile rdf:type owl:Class ;
+           rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Label> ;
+           rdfs:comment "A shapefile is a digital vector (non-topological) storage format for storing geometric location and associated attribute information. A shapefile can consist of points, lines or polygons."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Stakeholder_Consultation
+:Stakeholder_Consultation rdf:type owl:Class ;
+                          rdfs:comment "The process and requirements associated with carrying out stakeholder consultation as part of Principle 3, Stakeholder Inclusivity."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Stakeholder_Feedback_Round
+:Stakeholder_Feedback_Round rdf:type owl:Class ;
+                            rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process> ;
+                            rdfs:comment "An opportunity for Relevant Stakeholders to provide feedback about a project as part of the process towards fulfilling Principle 3 – Stakeholder Inclusivity."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Validation_&_Verification_Body
+<http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Gold_Standard_Validation_&_Verification_Body> rdf:type owl:Class ;
+                                                                                                                      rdfs:subClassOf :Miscellaneous ;
+                                                                                                                      rdfs:comment "A Gold Standard approved audit organisation appointed by and on behalf of the Project Developer to carry out an audit and assessment in order to provide a Validation or Verification Report to Gold Standard in order to ultimately support Certification or rejection."@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Monitoring,_Reporting_And_Verification
+<http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Monitoring,_Reporting_And_Verification> rdf:type owl:Class ;
+                                                                                                                rdfs:subClassOf <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Procedure> ;
+                                                                                                                rdfs:comment "System of collecting information, reporting and verifying that underpins Gold Standard for the Global Goals Principle 4 (Demonstration of Real Outcomes)"@en .
+
+
+###  http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Monitoring_&_Reporting_Plan
+<http://www.semanticweb.org/perd/ontologies/2023/0/untitled-ontology-71#Monitoring_&_Reporting_Plan> rdf:type owl:Class ;
+                                                                                                     rdfs:subClassOf :Miscellaneous ;
+                                                                                                     rdfs:comment "An initial plan and subsequent ongoing monitoring that is based on the systematic collection of data on specified indicators to provide indications of the extent to which outcomes are being achieved."@en .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Activity
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Activity> rdf:type owl:Class ;
+                                                                                  rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Condition
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Condition> rdf:type owl:Class ;
+                                                                                   rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Control> rdf:type owl:Class ;
+                                                                                 rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Entity
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Entity> rdf:type owl:Class ;
+                                                                                rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Indicator
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Indicator> rdf:type owl:Class ;
+                                                                                   rdfs:comment "https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl" .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Label
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Label> rdf:type owl:Class ;
+                                                                               rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Objective
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Objective> rdf:type owl:Class ;
+                                                                                   rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Output
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Output> rdf:type owl:Class ;
+                                                                                rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Period
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Period> rdf:type owl:Class ;
+                                                                                rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Procedure
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Procedure> rdf:type owl:Class ;
+                                                                                   rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Process> rdf:type owl:Class ;
+                                                                                 rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Reputation
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Reputation> rdf:type owl:Class ;
+                                                                                    rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Requirement
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Requirement> rdf:type owl:Class ;
+                                                                                     rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Resource
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Resource> rdf:type owl:Class ;
+                                                                                  rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Role
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#Role> rdf:type owl:Class ;
+                                                                              rdfs:seeAlso <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#State
+<https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl#State> rdf:type owl:Class ;
+                                                                               rdfs:comment <https://raw.githubusercontent.com/LuciaPauw/aiaontology/master/aia.owl> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
