@@ -13,7 +13,7 @@ do
 	then
 		echo "DUPLICATE"
 	else
-		curl -L -H \"Accept: text/turtle\" ${ARRAY[1]} >> ${ARRAY[0]}.ttl #Creates the ontology files
+		curl -L -H "Accept: text/turtle" ${ARRAY[1]} >> ${ARRAY[0]}.ttl #Creates the ontology files
 		java validate ${ARRAY[0]}.ttl output > ${ARRAY[0]}.txt
 	fi
 	unset ARRAY
