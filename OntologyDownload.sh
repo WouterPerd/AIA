@@ -1,5 +1,6 @@
 #!/bin/bash
 
+javac validate.java
 java validate sdg.ttl urls > URL.txt
 
 file="URL.txt" #file name
@@ -9,7 +10,7 @@ IFS=' ' #setting space as delimiter
 while read -r line
 do
 	read -a ARRAY <<< "$line" #reads line as an array as tokens separated by IFS
-	if [ -f ${ARRAY[0]}.ttl ] #checks for duplicates
+	if [ -f ${ARRAY[0]}.txt ] #checks for duplicates
 	then
 		echo "DUPLICATE"
 	else
