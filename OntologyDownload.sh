@@ -15,6 +15,7 @@ do
 	else
 		curl -L -H "Accept: text/turtle" ${ARRAY[1]} >> ${ARRAY[0]}.ttl #Creates the ontology files
 		java validate ${ARRAY[0]}.ttl output > ${ARRAY[0]}.txt
+		rm ${ARRAY[0]}.ttl
 	fi
 	unset ARRAY
 done <$file
