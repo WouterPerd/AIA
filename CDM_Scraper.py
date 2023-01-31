@@ -7,7 +7,7 @@ page = requests.get(sys.argv[1]).text
 document = BeautifulSoup(page, "html.parser")
 tr = document.find_all("tr")
 
-# Project Title ICOMPLETE, still need to write code to scrape appendices!!!
+# Project Title INCOMPLETE, still need to write code to scrape appendices!!!
 projectInfo = str(tr[0].find("span")).replace("<span>", "").replace("</span>", "")
 print("Project title:")
 print(projectInfo)
